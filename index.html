@@ -1,11 +1,14 @@
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Tahu Bulat</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Matrix UI</title>
+  <link rel="stylesheet" href="style.css" />
 
       <!-- FONTS -->
+       <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link
@@ -25,49 +28,42 @@
     <body>
       <!-- Navbar start -->
       <nav class="navbar">
-        <a href="#home" class="navbar-logo">Tahu Bulat <span>UI</span></a>
         <div class="navbar-nav">
           <a href="#home">Home</a>
-          <a href="#about">Tentang Kami</a>
-          <a href="#contact">Kontak</a>
-          <a href="#reviews">Review Card</a>
+          <a href="#about">About</a>
+          <a href="#contact">Competition</a>
+          <a href="#reviews">Timeline</a>
         </div>
 
-        <div class="navbar-extra">
-          <a href="#" id="user"><i data-feather="user"></i>Logout</a>
-          <a hfef="#" id="hamburger-menu"><i data-feather="menu"></i></a>
-        </div>
       </nav>
       <!-- Navbar end -->
 
       <!-- Hero section start -->
       <section class="hero" id="home">
         <main class="content">
-          <h1>Cemilan paling <span>Nikmat</span> Ya Tahu <span>Bulat</span></h1>
-          <p>Tahu Bulat ini siap untuk menemani hari hari mu, Beli Sekarang!.</p>
-          <a href="#" class="cta">Beli Sekarang</a>
         </main>
       </section>
       <!-- Hero section end -->
 
       <!-- About section start -->
+       <!-- Container animasi jatuh -->
+       <div class="falling-stars"></div>
       <section id="about" class="about">
-        <h2>Tentang Kami</h2>
+        <h2 style="text-align:center;">About Matrix UI</h2>
 
-        <div class="row">
-          <div class="about-img">
-            <img src="img/cobain2.jpg" alt="Tentang Kami" />
-          </div>
-          <div class="content">
-            <h3>Gurih, Hangat, dan Selalu Fresh!</h3>
+  <div class="row">
+    <div class="content">
+      <div class="oval-paragraph">
             <p>
-              Kami hanya menggunakan bahan berkualitas untuk memastikan setiap
-              tahu bulat yang kamu nikmati gurih, fresh, dan bikin nagih.
-            </p>
-            <p>
-              Setiap tahu bulat kami digoreng langsung saat dipesan, jadi kamu
-              selalu mendapatkan tahu yang hangat dan renyah. Dan jangan lupa
-              harga nya ramah banget di dompet.
+              MATRIX UI merupakan kegiatan tahunan di bawah naungan NAMs
+FTUI yang hadir dengan wajah baru setelah sebelumnya dikenal dengan
+nama NESCO. Tahun ini, MATRIX UI 2025 menghadirkan rangkaian program
+menarik seperti Essay Training, Essay Competition, Case Study
+Competition, Company Visit, dan Seminar yang terbuka bagi siswa SMA/
+sederajat, mahasiswa Diploma, dan Sarjana di Indonesia. Melalui kegiatan
+ini, MATRIX UI 2025 diharapkan dapat menjadi wadah pengembangan
+wawasan, keterampilan, serta jejaring peserta dalam bidang ilmu material
+dan teknologi yang berkelanjutan.
             </p>
           </div>
         </div>
@@ -76,78 +72,146 @@
 
       <!-- Contact section start -->
       <section id="contact" class="contact">
-        <h2>Hubungi Kami</h2>
-        <p>Masukkan data agar kami bisa menghubungi anda 🤩.</p>
-        <div class="row">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.9475481224113!2d106.96972197434523!3d-6.270628493718094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698dbcd826fd99%3A0x4718498e43c68e02!2sGrand%20Galaxy%20Park!5e0!3m2!1sid!2sid!4v1737883233309!5m2!1sid!2sid"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="map"
-          ></iframe>
+        <h2>Competition</h2>
+      <div class="competition-container">
 
-          <form>
-            <div class="input-group">
-              <i data-feather="user"></i>
-              <input type="text" placeholder="nama" />
-            </div>
-            <div class="input-group">
-              <i data-feather="mail"></i>
-              <input type="text" placeholder="email" />
-            </div>
-            <div class="input-group">
-              <i data-feather="phone"></i>
-              <input type="text" placeholder="no hp" />
-            </div>
-            <button type="submit" class="btn">Kirim Pesan</button>
-          </form>
-        </div>
-      </section>
+  <!-- COMPETITION 1 -->
+  <div class="competition">
+    <div class="competition-header">
+      <span class="competition-number">1</span>
+      <h2>Case Study Competition</h2>
+      <button class="toggle-btn">▼</button>
+    </div>
+    <div class="competition-content">
+      <p>
+         Case Study Competition merupakan ajang tingkat nasional yang ditujukan bagi mahasiswa untuk menguji kemampuan dalam menganalisis serta merumuskan solusi terhadap permasalahan nyata di bidang keberlanjutan, material maju, dan energi terbarukan. Melalui kompetisi ini, peserta didorong untuk mengasah pemikiran kritis, kemampuan problem solving, dan kerja sama tim, sekaligus berkontribusi dalam menghadapi tantangan global dengan gagasan yang inovatif dan aplikatif.
+      </p>
+      <div class="competition-links">
+      <!-- Ganti '#' dengan link tujuan -->
+      <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd6LNjOBhP1kh6zDRtmCEusnc_68Se1c45Tl_la5H8A7WQ53Q/viewform" 
+        class="btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Daftar Sekarang
+      </a>
+
+      <a 
+        href="https://drive.google.com/file/d/168u2A5KdgifUuuSkWBBXhfiGCfdkfqcH/view?usp=drive_link" 
+        class="btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        GuideBook
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- COMPETITION 2 -->
+  <div class="competition">
+    <div class="competition-header">
+      <span class="competition-number">2</span>
+      <h2>Essay Competition</h2>
+      <button class="toggle-btn">▼</button>
+    </div>
+    <div class="competition-content">
+      <p>
+        Kompetisi esai tingkat nasional bagi siswa SMA/SMK sederajat dengan tema “Empowering Sustainability through Advanced Materials and Renewable Energy”. Lomba ini menjadi wadah bagi generasi muda untuk menuangkan ide kreatif dan inovatif terkait peran nanoteknologi, material maju, dan energi terbarukan dalam mendukung keberlanjutan.
+      </p>
+      <div class="competition-links">
+      <!-- Ganti '#' dengan link tujuan -->
+      <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLSeihSpQ42BqiOb07wmeUruX1URat_ZPlB6s6infBXJavX6l0g/viewform" 
+        class="btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Daftar Sekarang
+      </a>
+
+      <a 
+        href="https://drive.google.com/file/d/14PCrvzRDj3EX69gmtT3FvapjaavyNfVS/view?usp=drive_link" 
+        class="btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        GuideBook
+      </a>
+    </div>
+  </div>
+</div>
+</section>
       <!-- Contact section end -->
 
       <!-- Card section start -->
-      <section class="reviews" id="reviews">
-        <h2>Review Card</h2>
-        <div class="review-container" id="review-container">
-          <!-- Card dari java script -->
-          <div class="card">
-            <img src="img/zahir.jpg" alt="Card" />
-            <h3>Zahir shahab</h3>
-            <p>Indonesia, Bekasi</p>  
-            <p>"Tahu bulat nya enak bnaget apalagi sambil netflix and chill."</p>
-          </div>
-        </div>
-      </section>
-      <!-- Card section end -->
+     <section class="reviews" id="reviews">
+  <!-- Judul timeline di atas, putih -->
+  <h2 class="timeline-title">Timeline</h2>
 
-      <!-- Footer section start -->
-      <footer>
-        <div class="socials">
-          <a href="#"> <i data-feather="instagram"></i></a>
-          <a><i data-feather="twitter"></i></a>
-          <a><i data-feather="facebook"></i> </a>
-        </div>
-        <div class="links">
-          <a href="#home">Home</a>
-          <a href="#about">Tentang Kami</a>
-          <a href="#contact">Kontak</a>
-          <a href="#reviews">Review Card</a>
-        </div>
-        <div class="credit">
-          <p>Created by <a href="">zahirshahab</a>. | &copy; 2025.</p>
-        </div>
-      </footer>
-      <!-- Footer section end -->
+  <div class="review-container" id="review-container">
+    
+    <!-- Card 1 -->
+    <div class="card">
+      <h3>Timeline Case Study Competition</h3>
+      <img src="img/TC.png" alt="Case Study Competition" class="zoomable" />
+    </div>
 
-      <!-- Feather icon -->
-      <script>
-        feather.replace();
-      </script>
-      <!-- Feather icon end -->
+    <!-- Card 2 -->
+    <div class="card">
+      <h3>Timeline Essay Competition</h3>
+      <img src="img/TES.png" alt="Essay Competition" class="zoomable" />
+    </div>
 
-      <!-- My javaScript -->
-      <script src="js/script.js"></script>
-      <!-- My javaScript end -->
-    </body>
-  </html>
+  </div>
+</section>
+
+<!-- Modal untuk zoom -->
+<div id="modal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modal-img">
+</div>
+
+
+      <footer class="footer">
+  <div class="footer-container">
+    <p class="footer-title">© Matrix UI 2025</p>
+
+    <div class="footer-info">
+      <div class="footer-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/535/535239.png" alt="Location" />
+        <span>Faculty of Engineering, University of Indonesia, Jl. Prof. DR. Ir. R Roosseno, Kukusan, Beji, Depok City, West Java 16425</span>
+      </div>
+
+      <div class="footer-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <a href="https://wa.me/6281282711575" target="_blank">CP 1 Case Study</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <a href="https://wa.me/6281319830992" target="_blank">CP 2 Case Study</a>
+       <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <a href="https://wa.me/6287822033092" target="_blank">CP 1 Essay</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+        <a href="https://wa.me/6285960600592" target="_blank">CP 2 Essay</a>
+      </div>
+
+      <div class="footer-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" />
+        <a href="https://www.instagram.com/matrixui.2025" target="_blank">@matrixui.2025</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+      
+<!-- Feather icon -->
+<script>feather.replace();</script>
+
+<!-- Bintang jatuh -->
+<script src="js/stars.js"></script>
+
+<!-- JS utama -->
+<script src="js/script.js"></script>
+</body>
+</html>
