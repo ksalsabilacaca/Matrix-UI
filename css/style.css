@@ -84,7 +84,7 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 100svh;
   padding-top: 80px;            /* biar gak ketutup navbar */
   background-attachment: scroll;
   display: flex;
@@ -687,43 +687,58 @@ p, li, span {
 }
 
 
+
 /* Tampil hanya di potrait / mobile */
 @media (max-width: 768px) {
   .scroll-banner {
-  position: absolute;
-  left: 50%;
-  bottom: 24%; /* kira-kira 5 cm dari bawah layar */
-  transform: translateX(-50%);
-  padding: 15px 35px;
-  border-radius: 12px;
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.4em;
-  color: white;
-  cursor: pointer;
-  background: linear-gradient(
-    145deg,
-    rgba(80, 130, 200, 0.25),
-    rgba(120, 90, 200, 0.25)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 12px rgba(100, 130, 220, 0.25);
-  transition: all 0.3s ease;
-  text-align: center;
-  letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+    transform: translateX(-50%);
+    padding: 15px 35px;
+    border-radius: 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.4em;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(
+      145deg,
+      rgba(80, 130, 200, 0.25),
+      rgba(120, 90, 200, 0.25)
+    );
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 12px rgba(100, 130, 220, 0.25);
+    transition: all 0.3s ease;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .scroll-banner:hover {
+    transform: translateX(-50%) scale(1.05);
+    background: linear-gradient(
+      145deg,
+      rgba(120, 160, 255, 0.35),
+      rgba(160, 120, 255, 0.35)
+    );
+    box-shadow: 0 0 18px rgba(170, 160, 255, 0.5);
+  }
 }
 
-.scroll-banner:hover {
-  transform: translateX(-50%) scale(1.05);
-  background: linear-gradient(
-    145deg,
-    rgba(120, 160, 255, 0.35),
-    rgba(160, 120, 255, 0.35)
-  );
-  box-shadow: 0 0 18px rgba(170, 160, 255, 0.5);
+/* muncul di portrait */
+@media (orientation: portrait) {
+  .scroll-banner {
+    display: block;
+  }
 }
 
+/* sembunyikan di landscape */
+@media (orientation: landscape) {
+  .scroll-banner {
+    display: none !important;
+  }
 }
+
 
 
 
