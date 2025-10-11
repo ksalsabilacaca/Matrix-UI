@@ -1,6 +1,12 @@
   // Toggle class active
   const navbarNav = document.querySelector('.navbar-nav');
 
+  // Scroll halus ke About
+function scrollToAbout() {
+  const aboutSection = document.getElementById("about");
+  aboutSection.scrollIntoView({ behavior: "smooth" });
+}
+
 // Ambil semua gambar zoomable
 const zoomImages = document.querySelectorAll('.zoomable');
 const modal = document.getElementById('modal');

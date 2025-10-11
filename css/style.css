@@ -85,14 +85,23 @@ body {
 /* Hero Section */
 .hero {
   min-height: 100vh;
+  padding-top: 80px;            /* biar gak ketutup navbar */
+  background-attachment: scroll;
   display: flex;
   align-items: center;
   background: 
-    url("../Img/matrixbg.png");
+    url("../Img/homeM.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
+}
+@media (orientation: landscape) {
+  .hero {
+    background-image: url("../Img/matrixbg.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .hero .content {
@@ -559,6 +568,17 @@ p, li, span {
   color: #ffffff88;
 }
 
+.footer-item:nth-last-child(-n+3) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+}
+
+.footer-item:nth-last-child(-n+3) img {
+  margin-right: 6px;
+}
+
 /* Responsif */
 @media (max-width: 600px) {
   .footer {
@@ -576,47 +596,51 @@ p, li, span {
   }
 }
 
-/* Tablet */
+/* Tablet / Potrait */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
 
-  #hamburger-menu {
-    display: inline-block;
+  /* Navbar — sama persis kayak landscape */
+  .navbar {
+    background: transparent; /* biar nyatu sama hero */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 1rem;
+    box-shadow: none; /* hapus bayangan */
   }
 
-  .navbar .navbar-nav {
-    position: absolute;
-    top: 100%;
-    right: -100%;
-    background-color: #fff;
-    width: 30rem;
-    height: 100vh;
-    transition: 0.3s;
+  .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 30px;
+    background: transparent; /* pastiin gak nutup bg */
   }
 
-  .navbar .navbar-nav.active {
-    right: 0;
-    border-top-left-radius: 16px;
+  .navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: normal;
+    font-family: 'Garet', 'Newsreader', 'Poppins', sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
   }
 
-  .navbar .navbar-nav a {
-    color: var(--bg);
-    display: block;
-    margin: 1.5rem;
-    padding: 0.5rem;
-    font-size: 2rem;
-  }
-
-  .navbar .navbar-nav a:hover {
-    color: #ffffff;
-    background-color: var(--bg);
-    transition: 0.3s;
-    border-radius: 16px;
-    padding: 7px;
-    padding-block: 1rem;
-    padding-block-end: 1rem;
+  .navbar-nav a:hover {
+    color: #8a2be2;
+    font-weight: 600;
+    transform: scale(1.1);
+    text-shadow:
+      0 0 5px #8a2be2,
+      0 0 10px #8a2be2,
+      0 0 20px #8a2be2;
   }
 
   .about .row {
@@ -661,5 +685,46 @@ p, li, span {
     font-size: 55%;
   }
 }
+
+
+/* Tampil hanya di potrait / mobile */
+@media (max-width: 768px) {
+  .scroll-banner {
+  position: absolute;
+  left: 50%;
+  bottom: 24%; /* kira-kira 5 cm dari bawah layar */
+  transform: translateX(-50%);
+  padding: 15px 35px;
+  border-radius: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.4em;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(
+    145deg,
+    rgba(80, 130, 200, 0.25),
+    rgba(120, 90, 200, 0.25)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 12px rgba(100, 130, 220, 0.25);
+  transition: all 0.3s ease;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.scroll-banner:hover {
+  transform: translateX(-50%) scale(1.05);
+  background: linear-gradient(
+    145deg,
+    rgba(120, 160, 255, 0.35),
+    rgba(160, 120, 255, 0.35)
+  );
+  box-shadow: 0 0 18px rgba(170, 160, 255, 0.5);
+}
+
+}
+
+
 
 /* Media Queries end */
