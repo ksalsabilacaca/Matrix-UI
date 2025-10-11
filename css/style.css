@@ -137,6 +137,62 @@ body {
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 1);
 }
 
+/* Kotak announcement di Home */
+.home-announcement {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -3cm);
+  display: inline-block;
+  background: rgba(160, 120, 255, 0.25);
+  color: white;
+  text-align: center;
+  padding: 20px 45px;
+  border-radius: 16px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.6em;
+  letter-spacing: 1px;
+  font-weight: 500;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 22px rgba(150, 130, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+.home-announcement:hover {
+  transform: translate(-50%, calc(-3cm - 5px)) scale(1.05);
+  box-shadow: 0 0 30px rgba(180, 160, 255, 0.6);
+  background: rgba(170, 130, 255, 0.35);
+}
+
+/* 📱 Portrait */
+@media (orientation: portrait) {
+  .home-announcement {
+    top: 75vh; /* posisi ideal di HP tegak */
+    font-size: 1.5em;
+  }
+}
+
+/* 💻 Laptop / Desktop */
+@media (min-width: 769px) {
+  .home-announcement {
+    top: 95vh; /* posisinya tetap di bawah */
+    font-size: 1.1em; /* lebih kecil dari sebelumnya */
+    padding: 12px 28px; /* kotaknya juga diperkecil */
+    border-radius: 10px;
+  }
+
+  .home-announcement:hover {
+    transform: translate(-50%, calc(-3cm - 3px)) scale(1.05);
+    box-shadow: 0 0 22px rgba(180, 160, 255, 0.5);
+    background: rgba(170, 130, 255, 0.3);
+  }
+}
+
+
+
 /* About section */
 .about,
 .contact,
@@ -693,7 +749,7 @@ p, li, span {
   .scroll-banner {
     position: absolute;
     left: 50%;
-    bottom: 24%;
+    bottom: 4%;
     transform: translateX(-50%);
     padding: 15px 35px;
     border-radius: 12px;
@@ -701,14 +757,6 @@ p, li, span {
     font-size: 1.4em;
     color: white;
     cursor: pointer;
-    background: linear-gradient(
-      145deg,
-      rgba(80, 130, 200, 0.25),
-      rgba(120, 90, 200, 0.25)
-    );
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(12px);
-    box-shadow: 0 0 12px rgba(100, 130, 220, 0.25);
     transition: all 0.3s ease;
     text-align: center;
     letter-spacing: 1px;
